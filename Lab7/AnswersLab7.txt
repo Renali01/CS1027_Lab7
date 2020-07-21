@@ -1,0 +1,22 @@
+Answers for Lab 7
+1. Why is the compilation error produced in the statement where method check is invoked? Is this an example of a checked exception or an 
+unchecked exception?
+This error was produced because it requires a "throws Exception" declaration or a try-catch block.
+This example is a checked exception because the error was caught at compile time, not run time.
+
+2. Why does ExceptionExample2 crash?
+NullPointerException on line 20
+
+3. Which exception is thrown: and exception of type NullPointerException or an exception of type Exception?
+NullPointerException is thrown
+
+4. Why does the compiler give a compilation error when swapping the catch statements?
+NullPointerException is a child class of Exception, so if catch (Exception e) is placed before catch (NullPointerException e), then any 
+exception that would have been caught by NullPointerException e would be first caught by Exception e, rendering the catch block with NullPointerException
+as pointless.
+
+5. Why is only the word "null" printed when running the program?
+In this case, the virtual machine created the standard message when Exception e is caught. The standard message is simply "null"
+
+6. What exception is thrown by ExceptionExample10? Is this a checked exception or an unchecked exception?
+Exception NumberFormatException is thrown. This is unchecked  exception because it was caught at runtime, not compilation time.
